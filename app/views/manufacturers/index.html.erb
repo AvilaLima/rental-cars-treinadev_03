@@ -1,0 +1,10 @@
+<h1>Fabricantes</h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<ul>
+    <% @manufacturers.each do |m|%>
+        <li><%= link_to  m.name, m %></li>
+    <%end%> 
+</ul>
+<%= link_to 'Voltar', root_path %>
