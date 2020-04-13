@@ -1,0 +1,10 @@
+<h1>Filiais</h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<ul>
+    <% @subsidiaries.each do |s|%>
+        <li><%= link_to  s.name, s %></li>
+    <%end%> 
+</ul>
+<%= link_to 'Voltar', root_path %>
