@@ -1,0 +1,2 @@
+class Carcategory < ApplicationRecord
+end
