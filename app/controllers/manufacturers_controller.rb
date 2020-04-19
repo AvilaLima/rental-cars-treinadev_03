@@ -10,8 +10,7 @@ class ManufacturersController < ApplicationController
     @manufacturer = Manufacturer.new
   end
   def create
-    @manufacturer = Manufacturer.new
-    @manufacturer.name = params[:manufacturer][:name]
+    @manufacturer = Manufacturer.new(params.require[:manufacturer].permit(:name))
     @manufacturer.save
     redirect_to @manufacturer
   end
