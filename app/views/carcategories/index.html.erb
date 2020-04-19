@@ -4,7 +4,7 @@
 </div>
 <ul>
     <% @carcategories.each do |cc|%>
-        <li><%= link_to  cc.name, cc %></li>
+        <li><%= link_to "#{cc.name}: #{cc.daily_rate}", cc %></li>
     <%end%> 
 </ul>
 <%= link_to 'Voltar', root_path %>

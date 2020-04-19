@@ -1549,3 +1549,449 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3292)
 
 
+Started GET "/" for 127.0.0.1 at 2020-04-18 21:05:58 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 114.6ms | ActiveRecord: 0.0ms | Allocations: 6542)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:06:03 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (111.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4368)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 339ms (Views: 16.1ms | ActiveRecord: 112.6ms | Allocations: 9454)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-18 21:06:05 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.3ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:11:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 4449)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:06:19 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 5512)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:06:38 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 55.0ms | Allocations: 5872)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.3ms | Allocations: 7593)
+
+
+  
+ActionView::Template::Error (undefined method `dailyrate' for #<Carcategory:0x00007f56c4013a98>
+Did you mean?  daily_rate
+               daily_rate=
+               daily_rate?):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name + cc.dailyrate, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:06:44 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3850)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 5606)
+
+
+  
+ActionView::Template::Error (undefined method `dailyrate' for #<Carcategory:0x00007f56d01046a8>
+Did you mean?  daily_rate
+               daily_rate=
+               daily_rate?):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name  cc.dailyrate, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:10:06 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3834)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 5567)
+
+
+  
+ActionView::Template::Error (undefined method `dailyrate' for #<Carcategory:0x00007f56ccc05b28>
+Did you mean?  daily_rate
+               daily_rate=
+               daily_rate?):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.dailyrate, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:10:18 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1621)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3336)
+
+
+  
+ActionView::Template::Error (no implicit conversion of BigDecimal into String):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name + cc.daily_rate, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7:in `+'
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:10:51 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 5544)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:11:02 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1058)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 2765)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Categorias dos Carros</h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<ul>
+    <% @carcategories.each do |cc|%>
+        <li><%= link_to  cc.name +": " cc.daily_rate.to_s, cc %></li>
+    <%end%> 
+</ul>
+<%= link_to 'Voltar', root_path %>
+):
+1:    <h1>Categorias dos Carros</h1>
+2:    <div class="notice">
+3:      <%= notice %>
+4:    </div>
+5:    <ul>
+6:        <% @carcategories.each do |cc|%>
+7:            <li><%= link_to  cc.name +": " cc.daily_rate.to_s, cc %></li>
+8:        <%end%> 
+9:    </ul>
+10:    <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:11:08 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1044)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2020)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Categorias dos Carros</h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<ul>
+    <% @carcategories.each do |cc|%>
+        <li><%= link_to  cc.name +": " cc.daily_rate.to_s, cc %></li>
+    <%end%> 
+</ul>
+<%= link_to 'Voltar', root_path %>
+):
+1:    <h1>Categorias dos Carros</h1>
+2:    <div class="notice">
+3:      <%= notice %>
+4:    </div>
+5:    <ul>
+6:        <% @carcategories.each do |cc|%>
+7:            <li><%= link_to  cc.name +": " cc.daily_rate.to_s, cc %></li>
+8:        <%end%> 
+9:    </ul>
+10:    <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected local variable or method, expecting ')'
+app/views/carcategories/index.html.erb:7: syntax error, unexpected ')', expecting '='
+app/views/carcategories/index.html.erb:8: syntax error, unexpected `end', expecting ')'
+app/views/carcategories/index.html.erb:12: syntax error, unexpected `end', expecting ')'
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:11:18 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1621)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 3332)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0)):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name +": " +cc.daily_rate.to_s, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:11:29 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1621)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 3332)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0)):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name +': ' +cc.daily_rate.to_s, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:11:37 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 5514)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:13:28 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1621)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 3325)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0)):
+    4: </div>
+    5: <ul>
+    6:     <% @carcategories.each do |cc|%>
+    7:         <li><%= link_to  cc.name +' :'+ cc.daily_rate.to_s, cc %></li>
+    8:     <%end%> 
+    9: </ul>
+   10: <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7
+app/views/carcategories/index.html.erb:6
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:14:49 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 5512)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:15:57 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1071)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2780)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Categorias dos Carros</h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<ul>
+    <% @carcategories.each do |cc|%>
+    <%  var textolink  = cc.name +': ' +cc.daily_rate.to_s %>
+        <li><%= link_to  textolink, cc %></li>
+    <%end%> 
+</ul>
+<%= link_to 'Voltar', root_path %>
+):
+1:    <h1>Categorias dos Carros</h1>
+2:    <div class="notice">
+3:      <%= notice %>
+4:    </div>
+5:    <ul>
+6:        <% @carcategories.each do |cc|%>
+7:        <%  var textolink  = cc.name +': ' +cc.daily_rate.to_s %>
+8:            <li><%= link_to  textolink, cc %></li>
+9:        <%end%> 
+10:    </ul>
+11:    <%= link_to 'Voltar', root_path %>
+  
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+app/views/carcategories/index.html.erb:7: syntax error, unexpected unary+, expecting `end'
+app/views/carcategories/index.html.erb:13: syntax error, unexpected `end', expecting end-of-input
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:17:31 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 5519)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:17:40 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 5496)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 21:17:46 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:6
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 5501)
+
+
