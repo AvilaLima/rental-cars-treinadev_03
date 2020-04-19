@@ -24760,3 +24760,489 @@ Processing by SubsidiariesController#show as HTML
 Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 2680)
   [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" ORDER BY "subsidiaries"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:56:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 9877)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:56:47 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.8ms | Allocations: 3831)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:56:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2134)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:56:47 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2287)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:57:28 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 9892)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:57:28 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 361)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 3871)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:57:28 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2133)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:57:28 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.0ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2309)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:58:14 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 9917)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:58:14 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:58:14 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2108)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:58:14 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-18 23:58:14 -0300
+Processing by CarcategoriesController#new as HTML
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 0.3ms | Allocations: 5160)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:59:03 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 9937)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:59:03 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:59:03 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:59:03 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.0ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-18 23:59:03 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 567)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 4523)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:59:33 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 9952)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:59:33 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-18 23:59:33 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-18 23:59:34 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.0ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-18 23:59:34 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 5986)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:00:21 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 9977)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:00:21 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:00:21 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 2108)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:00:21 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.0ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:00:21 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 5985)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:00:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 9997)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:00:31 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:00:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2108)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:00:31 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:00:31 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 6841)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:01:39 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 10012)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:01:39 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:01:39 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:01:39 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.0ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:01:39 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 6840)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 10032)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 3872)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 6839)
+Started POST "/carcategories" for 127.0.0.1 at 2020-04-19 00:01:51 -0300
+Processing by CarcategoriesController#create as HTML
+  Parameters: {"carcategory"=>{"name"=>"Van", "daily_rate"=>"400", "car_insurance"=>"500", "third_party_insurance"=>"1000"}, "commit"=>"Enviar"}
+No template found for CarcategoriesController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1616)
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" ORDER BY "carcategories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 10052)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 3863)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2108)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 6822)
+Started POST "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by CarcategoriesController#create as HTML
+  Parameters: {"carcategory"=>{"name"=>"Van", "daily_rate"=>"400", "car_insurance"=>"500", "third_party_insurance"=>"1000"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCarcategory Create (0.4ms)[0m  [1m[32mINSERT INTO "carcategories" ("name", "daily_rate", "car_insurance", "third_party_insurance", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Van"], ["daily_rate", 400.0], ["car_insurance", 500.0], ["third_party_insurance", 1000.0], ["created_at", "2020-04-19 03:04:09.228623"], ["updated_at", "2020-04-19 03:04:09.228623"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/carcategories/1
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 956)
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-19 00:04:09 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering carcategories/show.html.erb within layouts/application
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2704)
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" ORDER BY "carcategories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:04:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 10077)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:48 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 3863)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-04-19 00:04:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:48 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 2280)
+Started GET "/carcategories/new" for 127.0.0.1 at 2020-04-19 00:04:49 -0300
+Processing by CarcategoriesController#new as HTML
+  Rendering carcategories/new.html.erb within layouts/application
+  Rendered carcategories/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 6809)
+Started POST "/carcategories" for 127.0.0.1 at 2020-04-19 00:04:49 -0300
+Processing by CarcategoriesController#create as HTML
+  Parameters: {"carcategory"=>{"name"=>"Van", "daily_rate"=>"400", "car_insurance"=>"500", "third_party_insurance"=>"1000"}, "commit"=>"Enviar"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCarcategory Create (0.5ms)[0m  [1m[32mINSERT INTO "carcategories" ("name", "daily_rate", "car_insurance", "third_party_insurance", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Van"], ["daily_rate", 400.0], ["car_insurance", 500.0], ["third_party_insurance", 1000.0], ["created_at", "2020-04-19 03:04:49.044831"], ["updated_at", "2020-04-19 03:04:49.044831"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/carcategories/1
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 962)
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-19 00:04:49 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering carcategories/show.html.erb within layouts/application
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2722)
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" ORDER BY "carcategories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
