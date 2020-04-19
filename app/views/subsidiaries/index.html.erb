@@ -2,6 +2,7 @@
 <div class="notice">
   <%= notice %>
 </div>
+<%= link_to 'Registrar nova filial', new_subsidiary_path %>
 <ul>
     <% @subsidiaries.each do |s|%>
         <li><%= link_to  s.name, s %></li>
