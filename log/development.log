@@ -2399,3 +2399,173 @@ Processing by SubsidiariesController#new as HTML
 Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4758)
 
 
+Started GET "/" for 127.0.0.1 at 2020-04-20 03:22:45 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 7326)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-20 03:22:53 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 8032)
+
+
+Started GET "/manufacturers/new" for 127.0.0.1 at 2020-04-20 03:22:55 -0300
+Processing by ManufacturersController#new as HTML
+  Rendering manufacturers/new.html.erb within layouts/application
+  Rendered manufacturers/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4142)
+
+
+Started POST "/manufacturers" for 127.0.0.1 at 2020-04-20 03:23:00 -0300
+Processing by ManufacturersController#create as HTML
+  Parameters: {"authenticity_token"=>"Y5iV4YinRxCqvhDkwGsz9/vgZu9am8R2nTUHl7hKA0wDD7QE9C0c02VMoA4EyuZRtW8qZFQ0od9FMBRnz+T/vQ==", "manufacturer"=>{"name"=>"Fiat"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[36mManufacturer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? LIMIT ?[0m  [["name", "Fiat"], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+Redirected to http://localhost:3000/manufacturers/new
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 4828)
+
+
+Started GET "/manufacturers/new" for 127.0.0.1 at 2020-04-20 03:23:00 -0300
+Processing by ManufacturersController#new as HTML
+  Rendering manufacturers/new.html.erb within layouts/application
+  Rendered manufacturers/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3477)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-20 03:23:03 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 747)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 4509)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-20 03:23:04 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.4ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:22:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 4084)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-20 03:23:06 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 745)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 4487)
+
+
+Started GET "/manufacturers/new" for 127.0.0.1 at 2020-04-20 03:23:06 -0300
+Processing by ManufacturersController#new as HTML
+  Rendering manufacturers/new.html.erb within layouts/application
+  Rendered manufacturers/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3471)
+
+
+Started POST "/manufacturers" for 127.0.0.1 at 2020-04-20 03:23:09 -0300
+Processing by ManufacturersController#create as HTML
+  Parameters: {"authenticity_token"=>"K+U9ylZbz9vWAF5AKqLWozlytIOOoDCbJzH0Ji5jamFLchwvKtGUGBny7qruAwMFd/34CIAPVTL/NOfWWc2WkA==", "manufacturer"=>{"name"=>"Fiat"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[36mManufacturer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? LIMIT ?[0m  [["name", "Fiat"], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+Redirected to http://localhost:3000/manufacturers/new
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 3190)
+
+
+Started GET "/manufacturers/new" for 127.0.0.1 at 2020-04-20 03:23:09 -0300
+Processing by ManufacturersController#new as HTML
+  Rendering manufacturers/new.html.erb within layouts/application
+  Rendered manufacturers/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 276)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3477)
+
+
+Started POST "/manufacturers" for 127.0.0.1 at 2020-04-20 03:31:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ManufacturersController#create as HTML
+  Parameters: {"authenticity_token"=>"c+8psTdqOjQbxQmgISIVhr2LyoT47uMHBP3bcZZjLNJmOwaOMinx28BHlP2tMeV75bWMeHx3YKsLlwQoMImA4A==", "manufacturer"=>{"name"=>"Fiat"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[36mManufacturer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? LIMIT ?[0m  [["name", "Fiat"], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  Rendering manufacturers/new.html.erb within layouts/application
+  Rendered manufacturers/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 431)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 8871)
+
+
+Started POST "/manufacturers" for 127.0.0.1 at 2020-04-20 03:35:24 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ManufacturersController#create as HTML
+  Parameters: {"authenticity_token"=>"WN+/VAmvaiJKvkXxbvL0WrCoeZVV1IoJJ7/avlo3ESNNC5BrDOyhzZE82Kzi4QSn6JY/adFNCaUo1QXn/N29EQ==", "manufacturer"=>{"name"=>"Ford"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[36mManufacturer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? LIMIT ?[0m  [["name", "Ford"], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[36mManufacturer Create (0.3ms)[0m  [1m[32mINSERT INTO "manufacturers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ford"], ["created_at", "2020-04-20 06:35:24.927207"], ["updated_at", "2020-04-20 06:35:24.927207"]]
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:14:in `create'
+Redirected to http://localhost:3000/manufacturers/4
+Completed 302 Found in 21ms (ActiveRecord: 10.5ms | Allocations: 7459)
+
+
+Started GET "/manufacturers/4" for 127.0.0.1 at 2020-04-20 03:35:24 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:23:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5199)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-20 03:35:27 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 4861)
+
+
