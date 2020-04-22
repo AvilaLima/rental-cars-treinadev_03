@@ -31,9 +31,14 @@ class ManufacturersController < ApplicationController
     end
   end
 
+  def destroy
+    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer.destroy
+    redirect_to manufacturers_path
+  end
+  
   def show
-    id = params[:id]
-    @manufacturer = Manufacturer.find(id)
+    @manufacturer = Manufacturer.find(params[:id])
   end  
   def manufacturer_params
     params.require(:manufacturer).permit(:name)
