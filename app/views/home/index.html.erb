@@ -4,3 +4,13 @@
 <%= link_to 'Fabricantes', manufacturers_path %>
 <%= link_to 'Filiais', subsidiaries_path %>
 <%= link_to 'Categorias', carcategories_path %>
+
+<h3> Playground </h3>
+
+<p><%= I18n.localize(Time.zone.now)%></p>
+
+<p><%= I18n.localize(Date.today)%></p>
+
+<p><%= distance_of_time_in_words(12000) %></p>
+
+<p><%= number_to_currency(10000.0) %></p>
