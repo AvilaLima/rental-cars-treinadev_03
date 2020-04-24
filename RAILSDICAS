@@ -1,0 +1,5 @@
+save_page #debug do capibara(parte de teste do rails)
+belongs_to #não permite null mas, tem como marcar optional na model
+
+find("a#details-#{uno.id}").click() ou #click_on "details-#{uno.id}"
+         #Resolvendo ambiguidade nos testes

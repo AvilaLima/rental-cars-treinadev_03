@@ -3875,3 +3875,24 @@ Processing by CarcategoriesController#show as HTML
 Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 4442)
 
 
+Started GET "/" for 127.0.0.1 at 2020-04-24 03:20:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4325)
+
+
+Started GET "/car_models" for 127.0.0.1 at 2020-04-24 03:20:29 -0300
+Processing by CarModelsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "car_models"[0m
+  ↳ app/controllers/car_models_controller.rb:4:in `index'
+  Rendering car_models/index.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/car_models/index.html.erb:14
+  Rendered car_models/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 789)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 6070)
+
+

@@ -1,4 +1,7 @@
 <h1>Modelos de Carros </h1>
+<div class="notice">
+  <%= notice %>
+</div>
 <table>
     <thead>
     <tr>
@@ -9,12 +12,12 @@
     </thead>
     <tbody>
     <% @car_models.each do |cm| %>
-    <tr>
-        <td><%= cm.manufacturer.name %></td>
-        <td><%= cm.name %></td>
-        <td><%= cm.year %></td>
-        <td><%=  link_to 'Ver Detalhes', cm %></td>
-    </tr>
+      <tr id="car-model-<%= cm.id %>">
+          <td><%= cm.manufacturer.name %></td>
+          <td><%= cm.name %></td>
+          <td><%= cm.year %></td>
+          <td><%= link_to 'Ver Detalhes', cm, id: "details-#{cm.id}" %></td>
+      </tr>
     <% end %>
     </tbody>
 </table>
