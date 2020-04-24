@@ -1,0 +1,19 @@
+<h1>Modelo do Carro <%= @car_model.name %></h1>
+<dl>
+    <dt>Fabricante: </dt> 
+    <dd> <%= @car_model.manufacturer.name %></dd>   
+    <dt>Ano: </dt> 
+    <dd> <%= @car_model.year %></dd>
+    <dt>Motor: </dt> 
+    <dd> <%= @car_model.motorization %></dd>
+    <dt>Combustível: </dt> 
+    <dd> <%= @car_model.fuel_type %></dd>
+    <dt>Categoria: </dt> 
+    <dd> <%= @car_model.carcategory.name %></dd>
+    <dt>Diária: </dt> 
+    <dd> <%= number_to_currency @car_model.carcategory.daily_rate %></dd>
+    <dt>Seguro do Carro: </dt> 
+    <dd> <%= number_to_currency @car_model.carcategory.car_insurance %></dd>
+    <dt>Seguro contra terceiros: </dt> 
+    <dd> <%= number_to_currency @car_model.carcategory.third_party_insurance %></dd>
+</dl>
