@@ -4022,3 +4022,7 @@ Processing by CustomersController#new as HTML
 Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 7410)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCustomer Exists? (15.9ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."document" = ? LIMIT ?[0m  [["document", "314.417.718-08"], ["LIMIT", 1]]
+  [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
