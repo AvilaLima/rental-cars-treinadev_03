@@ -14,7 +14,7 @@ feature 'Admin edits manufacturer' do
     expect(page).to have_content('Honda')
   end
 
-  scenario 'succeand name cannot be blank' do
+  scenario 'and name cannot be blank' do
     Manufacturer.create!(name: 'Fiat')
 
     visit root_path

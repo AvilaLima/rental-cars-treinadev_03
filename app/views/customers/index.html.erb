@@ -1,0 +1,24 @@
+<h1>Clientes </h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<%= link_to 'Registrar novo cliente', new_customer_path %>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @customers.each do |c| %>
+      <tr id="customer-<%= c.id %>">
+          <td><%= c.name %></td>
+          <td><%= c.document %></td>
+          <td><%= c.email %></td>
+          <td><%= link_to 'Ver Detalhes', c, id: "details-#{c.id}" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+</table>

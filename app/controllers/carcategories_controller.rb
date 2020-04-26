@@ -15,8 +15,7 @@ class CarcategoriesController < ApplicationController
     redirect_to @carcategory        
   end
   def show
-    id= params[:id]
-    @carcategory = Carcategory.find(id)
+    @carcategory = Carcategory.find(params[:id])
   end
 
   private
