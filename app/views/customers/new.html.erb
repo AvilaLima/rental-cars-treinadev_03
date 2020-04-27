@@ -4,7 +4,7 @@
 <%end%>
 <%= form_with model: @customer, local: true do |c|%>
   <%= c.label :name, 'Nome' %>
-  <% c.text_field :name %>
+  <%= c.text_field :name %>
   <%= c.label :document, 'CPF' %>
   <%= c.text_field :document %>
   <%= c.label :email, 'Email' %>

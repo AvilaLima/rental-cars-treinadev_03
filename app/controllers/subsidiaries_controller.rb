@@ -10,10 +10,7 @@ class SubsidiariesController < ApplicationController
       @subsidiary = Subsidiary.new 
     end
     def create
-      @subsidiary = Subsidiary.new
-      @subsidiary.name = params[:subsidiary][:name]
-      @subsidiary.cnpj = params[:subsidiary][:cnpj]      
-      @subsidiary.address = params[:subsidiary][:address]
+      @subsidiary = Subsidiary.new(subsidiary_params)
       @subsidiary.save
       redirect_to @subsidiary
     end
@@ -21,5 +18,23 @@ class SubsidiariesController < ApplicationController
       id = params[:id]
       @subsidiary = Subsidiary.find(id)
     end 
+
+    def edit
+      @subsidiary = Subsidiary.find(params[:id])
+    end
+
+    def update
+      @subsidiary= Subsidiary.find(params[:id])
+      if @subsidiary.update(subsidiary_params)
+        flash[:notice]= 'Filial atualizada com sucesso'
+        redirect_to @subsidiary
+      else
+        render :edit
+      end 
+    end
+
+    def subsidiary_params
+      params.require(:subsidiary).permit(:name, :cnpj,:address)
+    end
   end
     

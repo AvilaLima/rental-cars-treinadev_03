@@ -18,6 +18,19 @@ class CarcategoriesController < ApplicationController
     @carcategory = Carcategory.find(params[:id])
   end
 
+  def edit
+    @carcategory = Carcategory.find(params[:id])
+  end
+
+  def update
+    @carcategory = Carcategory.find(params[:id])
+    if @carcategory.update(carcategory_params)
+      flash[:notice]= 'Categoria atualizada com sucesso'
+      redirect_to @carcategory
+    else
+      render :edit
+    end
+  end
   private
 
   def carcategory_params

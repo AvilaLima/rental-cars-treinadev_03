@@ -4026,3 +4026,965 @@ Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 7410
   [1m[36mCustomer Exists? (15.9ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."document" = ? LIMIT ?[0m  [["document", "314.417.718-08"], ["LIMIT", 1]]
   [1m[36mCustomer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/customers/new" for 127.0.0.1 at 2020-04-26 22:16:07 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 11.9ms | ActiveRecord: 0.9ms | Allocations: 11632)
+
+
+Started GET "/customers" for 127.0.0.1 at 2020-04-26 22:16:08 -0300
+Processing by CustomersController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `index'
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:15
+  Rendered customers/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 4819)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-26 22:16:08 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4036)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-26 22:16:12 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.3ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:7
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 14.5ms | ActiveRecord: 21.3ms | Allocations: 9845)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:16:15 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.6ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.1ms | Allocations: 8548)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:16:17 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4737)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:16:19 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"m2zlub6Ce7DIWRO+ei6Eb8bAa7axWXkX+szy+PWQlMeINrKqrdTVRV6CobVMZg5WNjP7n1ob/yzD0Yk5x3cL7w==", "carcategory"=>{"name"=>"Caminhonete", "daily_rate"=>"1000.0", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonete"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+Redirected to http://localhost:3000/carcategories/1
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 3830)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:16:19 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.3ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 4427)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:16:20 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4287)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:17:02 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"Gwg+Cei8KJK5kzM+rWP2+jBRPWaNunreh/Ro3y94nLUIUmka++qGZy9IgTWbK3zDwKKtT2b4/OW+6RMeHZ8DnQ==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"1000.0", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Update (0.3ms)[0m  [1m[33mUPDATE "carcategories" SET "name" = ?, "updated_at" = ? WHERE "carcategories"."id" = ?[0m  [["name", "Caminhonetee"], ["updated_at", "2020-04-27 01:17:02.583779"], ["id", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+Redirected to http://localhost:3000/carcategories/1
+Completed 302 Found in 17ms (ActiveRecord: 8.8ms | Allocations: 5618)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:17:02 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5529)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:17:04 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4737)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:17:09 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"iaxI1402W/Eqn27beVP3R0At8g6YCviTNQX4+3e/M++a9h/EnmD1BLxE3NBPG31+sN5iJ3NIfqgMGIM6RVisxw==", "carcategory"=>{"name"=>"Coupe", "daily_rate"=>"1000.0", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Coupe"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 9196)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:31:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 10241)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:31:07 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4346)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:31:11 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"6sNsntEwFeM+a5cZBBfMQGjSc8lPXSi85xVEBuBlmwj5mTuNwma7FqiwJRIyX0Z5mCHj4KQfrofeCD/H0oIEIA==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"-1", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Update (0.3ms)[0m  [1m[33mUPDATE "carcategories" SET "daily_rate" = ?, "updated_at" = ? WHERE "carcategories"."id" = ?[0m  [["daily_rate", -1.0], ["updated_at", "2020-04-27 01:31:11.282147"], ["id", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+Redirected to http://localhost:3000/carcategories/1
+Completed 302 Found in 17ms (ActiveRecord: 8.5ms | Allocations: 5816)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:31:11 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.3ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 728)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 4411)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:32:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 660)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 9117)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:32:56 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"r9wbpBpTp+xql5hhjywungvLBrZXyYrSy3NegUg/GOy8hky3CQUJGfxMKmq5ZKSn+ziWn7yLDOnybiVAetiHxA==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"1000", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Update (0.2ms)[0m  [1m[33mUPDATE "carcategories" SET "daily_rate" = ?, "updated_at" = ? WHERE "carcategories"."id" = ?[0m  [["daily_rate", 1000.0], ["updated_at", "2020-04-27 01:32:56.634546"], ["id", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+Redirected to http://localhost:3000/carcategories/1
+Completed 302 Found in 18ms (ActiveRecord: 9.8ms | Allocations: 5774)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:32:56 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 6044)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:32:57 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4289)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:32:59 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"/S0pICAhPHZKW7PHRsnbwPTBNVm1N14vaPRUFDjhgxLud34zM3eSg9yAAcxwgVH5BDKlcF512BRR6S/VCgYcOg==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"-1", "car_insurance"=>"500.0", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 7956)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:36:00 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2392)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 7.2ms | ActiveRecord: 1.1ms | Allocations: 10913)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 22:36:01 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4350)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:36:03 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"aAVdr/OtIcQkkF6wQXW6NWwAocnBUc4WisH3J84PaEB7Xwq84PuPMbJL7Lt3PTAMnPMx4CoTSC2z3Izm/Oj3aA==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"1000.0", "car_insurance"=>"-1", "third_party_insurance"=>"800.0"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 8120)
+
+
+Started PATCH "/carcategories/1" for 127.0.0.1 at 2020-04-26 22:36:13 -0300
+Processing by CarcategoriesController#update as HTML
+  Parameters: {"authenticity_token"=>"s6vjGUNLbTGPXID5hwEZfu68ywhR1egw0686OvspQjGRQ8NBMlIqQPa1qXZxyeDPmx1a/po2FhjFF3eiMpcqTg==", "carcategory"=>{"name"=>"Caminhonetee", "daily_rate"=>"1000.0", "car_insurance"=>"-1", "third_party_insurance"=>"-1"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:26:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[36mCarcategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "carcategories" WHERE "carcategories"."name" = ? AND "carcategories"."id" != ? LIMIT ?[0m  [["name", "Caminhonetee"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/carcategories_controller.rb:27:in `update'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 8417)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 23:09:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.3ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 10314)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 23:09:30 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4338)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 23:09:31 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 728)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4421)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-26 23:09:33 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:7
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 4822)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-04-26 23:09:34 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 4417)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-04-26 23:09:35 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 594)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4274)
+
+
+Started GET "/carcategories" for 127.0.0.1 at 2020-04-26 23:09:41 -0300
+Processing by CarcategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:7
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 4441)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-26 23:09:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 4013)
+
+
+Started GET "/customers" for 127.0.0.1 at 2020-04-26 23:09:44 -0300
+Processing by CustomersController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `index'
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:15
+  Rendered customers/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 5963)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2020-04-26 23:09:45 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 6740)
+
+
+Started GET "/customers" for 127.0.0.1 at 2020-04-26 23:10:04 -0300
+Processing by CustomersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `index'
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:15
+  Rendered customers/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 823)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 5473)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-26 23:10:06 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.9ms | Allocations: 7571)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:10:07 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4204)
+
+
+Started GET "/manufacturers/1/edit" for 127.0.0.1 at 2020-04-26 23:10:08 -0300
+Processing by ManufacturersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:25:in `edit'
+  Rendering manufacturers/edit.html.erb within layouts/application
+  Rendered manufacturers/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4359)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:19:20 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4876)
+
+
+Started GET "/manufacturers/1/edit" for 127.0.0.1 at 2020-04-26 23:19:21 -0300
+Processing by ManufacturersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:25:in `edit'
+  Rendering manufacturers/edit.html.erb within layouts/application
+  Rendered manufacturers/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 540)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 4349)
+
+
+Started PATCH "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:19:23 -0300
+Processing by ManufacturersController#update as HTML
+  Parameters: {"authenticity_token"=>"3QpvAwgFva3Dbd5Jifrpg2nAtqDtLvj5Q03EkhVx4StfZzhuC5dSoc62ekcwz6eYxLa4FQVNLaxn5KgdLaUd1Q==", "manufacturer"=>{"name"=>"Fiat"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+  [1m[36mManufacturer Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? AND "manufacturers"."id" != ? LIMIT ?[0m  [["name", "Fiat"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+Redirected to http://localhost:3000/manufacturers/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 3399)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:19:23 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3819)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-26 23:19:25 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 4862)
+
+
+Started GET "/manufacturers/1/edit" for 127.0.0.1 at 2020-04-26 23:29:34 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ManufacturersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:25:in `edit'
+  Rendering manufacturers/edit.html.erb within layouts/application
+  Rendered manufacturers/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 7588)
+
+
+Started PATCH "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:29:35 -0300
+Processing by ManufacturersController#update as HTML
+  Parameters: {"authenticity_token"=>"DZvBW4yGzhQSI6gUFOVAY3kPi1vJqfxp840cM1nZNRKP9pY2jxQhGB/4DBqt0A541HmF7iHKKTzXJHC8YQ3J7A==", "manufacturer"=>{"name"=>"Fiat"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+  [1m[36mManufacturer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "manufacturers" WHERE "manufacturers"."name" = ? AND "manufacturers"."id" != ? LIMIT ?[0m  [["name", "Fiat"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/manufacturers_controller.rb:30:in `update'
+Redirected to http://localhost:3000/manufacturers/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 3410)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:29:35 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 258)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4098)
+
+
+Started GET "/manufacturers/1/edit" for 127.0.0.1 at 2020-04-26 23:34:40 -0300
+Processing by ManufacturersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:25:in `edit'
+  Rendering manufacturers/edit.html.erb within layouts/application
+  Rendered manufacturers/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 5150)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:34:40 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4074)
+
+
+Started GET "/manufacturers/1/edit" for 127.0.0.1 at 2020-04-26 23:34:41 -0300
+Processing by ManufacturersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:25:in `edit'
+  Rendering manufacturers/edit.html.erb within layouts/application
+  Rendered manufacturers/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 4001)
+
+
+Started GET "/manufacturers/1" for 127.0.0.1 at 2020-04-26 23:34:42 -0300
+Processing by ManufacturersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/manufacturers_controller.rb:46:in `show'
+  Rendering manufacturers/show.html.erb within layouts/application
+  Rendered manufacturers/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3782)
+
+
+Started GET "/manufacturers" for 127.0.0.1 at 2020-04-26 23:34:43 -0300
+Processing by ManufacturersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "manufacturers"[0m
+  ↳ app/controllers/manufacturers_controller.rb:4:in `index'
+  Rendering manufacturers/index.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.1ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/manufacturers/index.html.erb:7
+  Rendered manufacturers/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 4864)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-26 23:34:45 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4001)
+
+
+Started GET "/subsidiaries" for 127.0.0.1 at 2020-04-26 23:34:46 -0300
+Processing by SubsidiariesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "subsidiaries"[0m
+  ↳ app/controllers/subsidiaries_controller.rb:4:in `index'
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:7
+  Rendered subsidiaries/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.7ms | Allocations: 8718)
+
+
+Started GET "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:34:47 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.2ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4159)
+
+
+Started GET "/subsidiaries/1/edit" for 127.0.0.1 at 2020-04-26 23:34:48 -0300
+Processing by SubsidiariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:23:in `edit'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4598)
+
+
+Started PATCH "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:34:51 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"bwVPYScXGV1HJJ8eTq5i9iDedT66aeE+76tvY1bJTSxOoUy4I3isQ7Lg5Ni0gOQcvdyRidajbcNxdgWHIutdIg==", "subsidiary"=>{"name"=>"Caoa", "cnpj"=>"0001", "address"=>"Rua Direita, 222"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "0001"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", "Caoa"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 12.4ms | ActiveRecord: 0.5ms | Allocations: 8863)
+
+
+Started PATCH "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:35:01 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"smC1/fCrpvzMBqfo8we64J4Ar7ObelDQGJF/srESMLmQiJWlgbLhjbXvjmcFz0NR66E+RVCZrvgOKTIqeKxYxg==", "subsidiary"=>{"name"=>"Caoa", "cnpj"=>"74.534.339/0001-04", "address"=>"Rua Direita, 222"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "74.534.339/0001-04"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", "Caoa"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Update (0.2ms)[0m  [1m[33mUPDATE "subsidiaries" SET "cnpj" = ?, "updated_at" = ? WHERE "subsidiaries"."id" = ?[0m  [["cnpj", "74.534.339/0001-04"], ["updated_at", "2020-04-27 02:35:01.076886"], ["id", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+Redirected to http://localhost:3000/subsidiaries/1
+Completed 302 Found in 30ms (ActiveRecord: 8.5ms | Allocations: 6534)
+
+
+Started GET "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:35:01 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 3765)
+
+
+Started GET "/subsidiaries" for 127.0.0.1 at 2020-04-26 23:35:02 -0300
+Processing by SubsidiariesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "subsidiaries"[0m
+  ↳ app/controllers/subsidiaries_controller.rb:4:in `index'
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:7
+  Rendered subsidiaries/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4473)
+
+
+Started GET "/subsidiaries/2" for 127.0.0.1 at 2020-04-26 23:35:03 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 3745)
+
+
+Started GET "/subsidiaries/2/edit" for 127.0.0.1 at 2020-04-26 23:35:08 -0300
+Processing by SubsidiariesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:23:in `edit'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 4173)
+
+
+Started PATCH "/subsidiaries/2" for 127.0.0.1 at 2020-04-26 23:35:10 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"4VCae7/i49ZzK2N2vTf4vp73x6SmipnR5hFtOZX/geRvU/Ti62gvZsE8/CFLrXkQRXCKxPyW1FGXgiwtJQUv4A==", "subsidiary"=>{"name"=>"SIM", "cnpj"=>"48.030.410/0001-01", "address"=>"Rua Esquerda, 333"}, "commit"=>"Enviar", "id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "48.030.410/0001-01"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", "SIM"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Update (0.3ms)[0m  [1m[33mUPDATE "subsidiaries" SET "cnpj" = ?, "updated_at" = ? WHERE "subsidiaries"."id" = ?[0m  [["cnpj", "48.030.410/0001-01"], ["updated_at", "2020-04-27 02:35:10.292469"], ["id", 2]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+Redirected to http://localhost:3000/subsidiaries/2
+Completed 302 Found in 18ms (ActiveRecord: 8.4ms | Allocations: 6513)
+
+
+Started GET "/subsidiaries/2" for 127.0.0.1 at 2020-04-26 23:35:10 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3767)
+
+
+Started GET "/subsidiaries/2/edit" for 127.0.0.1 at 2020-04-26 23:35:11 -0300
+Processing by SubsidiariesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:23:in `edit'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4192)
+
+
+Started PATCH "/subsidiaries/2" for 127.0.0.1 at 2020-04-26 23:35:13 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"GGVoq+Lc9xOK4P10bfPV47YAyKmb2WEfWrfRD/RzzwOWZgYytlY7ozj3YiObaVRNbYeFycHFLJ8rJJAbRIlhBw==", "subsidiary"=>{"name"=>"SIM", "cnpj"=>"48.030.410/0001-01", "address"=>"Rua Esquerda, 333"}, "commit"=>"Enviar", "id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "48.030.410/0001-01"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", "SIM"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+Redirected to http://localhost:3000/subsidiaries/2
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 4409)
+
+
+Started GET "/subsidiaries/2" for 127.0.0.1 at 2020-04-26 23:35:13 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3764)
+
+
+Started GET "/subsidiaries" for 127.0.0.1 at 2020-04-26 23:35:14 -0300
+Processing by SubsidiariesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "subsidiaries"[0m
+  ↳ app/controllers/subsidiaries_controller.rb:4:in `index'
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:7
+  Rendered subsidiaries/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4459)
+
+
+Started GET "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:35:25 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3751)
+
+
+Started GET "/subsidiaries/1/edit" for 127.0.0.1 at 2020-04-26 23:35:26 -0300
+Processing by SubsidiariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:23:in `edit'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4187)
+
+
+Started PATCH "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:35:29 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"ItFN2nhy+mt6X4seLLbfs4T14A6ln0ZiMtpsCZkOowkDdU4DfB1PdY+b8NjWmFlZGfcEuclVyp+sBwbt7SyzBw==", "subsidiary"=>{"name"=>"", "cnpj"=>"74.534.339/0001-04", "address"=>"Rua Direita, 222"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "74.534.339/0001-04"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", ""], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 649)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 8626)
+
+
+Started GET "/subsidiaries/1/edit" for 127.0.0.1 at 2020-04-26 23:37:42 -0300
+Processing by SubsidiariesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:23:in `edit'
+  Rendering subsidiaries/edit.html.erb within layouts/application
+  Rendered subsidiaries/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 493)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4177)
+
+
+Started PATCH "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:37:46 -0300
+Processing by SubsidiariesController#update as HTML
+  Parameters: {"authenticity_token"=>"7fA/o2lM2F0fBCur57PrNX414xHUQDny7ttn+x/vtonPGB/7GFWfLGbtAiQRexKEC5Ry5x+jx9r4Yypj1lHe9g==", "subsidiary"=>{"name"=>"Caoaa", "cnpj"=>"74.534.339/0001-04", "address"=>"Rua Direita, 222"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:27:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."cnpj" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["cnpj", "74.534.339/0001-04"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "subsidiaries" WHERE "subsidiaries"."name" = ? AND "subsidiaries"."id" != ? LIMIT ?[0m  [["name", "Caoaa"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[36mSubsidiary Update (0.2ms)[0m  [1m[33mUPDATE "subsidiaries" SET "name" = ?, "updated_at" = ? WHERE "subsidiaries"."id" = ?[0m  [["name", "Caoaa"], ["updated_at", "2020-04-27 02:37:46.418806"], ["id", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/subsidiaries_controller.rb:28:in `update'
+Redirected to http://localhost:3000/subsidiaries/1
+Completed 302 Found in 19ms (ActiveRecord: 8.4ms | Allocations: 6509)
+
+
+Started GET "/subsidiaries/1" for 127.0.0.1 at 2020-04-26 23:37:46 -0300
+Processing by SubsidiariesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries" WHERE "subsidiaries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subsidiaries_controller.rb:19:in `show'
+  Rendering subsidiaries/show.html.erb within layouts/application
+  Rendered subsidiaries/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3767)
+
+
+Started GET "/subsidiaries" for 127.0.0.1 at 2020-04-26 23:37:47 -0300
+Processing by SubsidiariesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "subsidiaries"[0m
+  ↳ app/controllers/subsidiaries_controller.rb:4:in `index'
+  Rendering subsidiaries/index.html.erb within layouts/application
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/subsidiaries/index.html.erb:7
+  Rendered subsidiaries/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 4461)
+
+
