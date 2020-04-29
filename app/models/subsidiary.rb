@@ -9,7 +9,7 @@ class Subsidiary < ApplicationRecord
 
   def cnpj_must_be_valid
     unless CNPJ.valid?(cnpj)
-      errors.add(:cnpj, 'não é válido')      
+      errors.add(:cnpj, :invalid)      
     end
   end
 end

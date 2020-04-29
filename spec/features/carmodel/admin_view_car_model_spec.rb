@@ -4,7 +4,7 @@ feature 'Admin view car models' do
     scenario 'successfully' do
         #arrange
         fiat =  Manufacturer.create!(name: 'Fiat')
-        cat_a= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+        cat_a= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
         
         ford = Manufacturer.create!(name: 'Ford')
 
@@ -37,10 +37,10 @@ feature 'Admin view car models' do
         
         #arrange
         fiat =  Manufacturer.create!(name: 'Fiat')
-        cat_a= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+        cat_a= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
         uno = CarModel.create!(name: 'Uno', year: 2020, manufacturer: fiat, motorization: '1.0', fuel_type: 'Flex', carcategory: cat_a)    
         
-        cat_e= Carcategory.create!(name: 'Caminhonete',daily_rate:200,car_insurance: 350,third_party_insurance:500)
+        cat_e= Carcategory.create!(name: 'Caminhonete',daily_rate:200,car_insurance: 350,third_part_insurance:500)
         CarModel.create!(name: 'Toro', year: 2020, manufacturer: fiat, motorization: '2.0', fuel_type: 'Diesel', carcategory: cat_e)     
 
         #act

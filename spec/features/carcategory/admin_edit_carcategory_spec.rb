@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'Admin edits carcategory'do
   
   scenario 'sucessfully' do
-    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_party_insurance:150)
+    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
 
     visit root_path
     click_on 'Categorias'
@@ -22,7 +22,7 @@ feature 'Admin edits carcategory'do
   end
 
   scenario 'and return to subsidiaries page' do
-    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_party_insurance:150)
+    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
 
     visit root_path
     click_on 'Categorias'
@@ -33,7 +33,7 @@ feature 'Admin edits carcategory'do
   end
 
   scenario 'and name cannot be blank' do    
-    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_party_insurance:150)
+    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
     visit root_path
     
     click_on 'Categorias'
@@ -48,8 +48,8 @@ feature 'Admin edits carcategory'do
   end
 
   scenario 'and name must be unique' do
-    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_party_insurance:150)
-    Carcategory.create!(name: 'Categoria S',daily_rate:200,car_insurance: 250,third_party_insurance:400)
+    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
+    Carcategory.create!(name: 'Categoria S',daily_rate:200,car_insurance: 250,third_part_insurance:400)
 
     visit root_path
     click_on 'Categorias'
@@ -67,8 +67,8 @@ feature 'Admin edits carcategory'do
    
   end
 
-  scenario 'and daily_rate and car_insurance and third_party_insurance cannot be less than zero' do
-    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_party_insurance:150)
+  scenario 'and daily_rate and car_insurance and third_part_insurance cannot be less than zero' do
+    Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
 
     visit root_path
 
@@ -87,7 +87,7 @@ feature 'Admin edits carcategory'do
     
     expect(page).to have_content('Daily rate deve ser maior que 0')
     expect(page).to have_content('Car insurance deve ser maior que 0')
-    expect(page).to have_content('Third party insurance deve ser maior que 0')
+    expect(page).to have_content('Third part insurance deve ser maior que 0')
     
     
   end

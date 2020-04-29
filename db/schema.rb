@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_194945) do
+ActiveRecord::Schema.define(version: 2020_04_29_023915) do
 
   create_table "car_models", force: :cascade do |t|
     t.string "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_194945) do
     t.string "name"
     t.decimal "daily_rate"
     t.decimal "car_insurance"
-    t.decimal "third_party_insurance"
+    t.decimal "third_part_insurance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -6,6 +6,6 @@ class Carcategory < ApplicationRecord
   
   validates_numericality_of :daily_rate, greater_than: 0
   validates_numericality_of :car_insurance, greater_than: 0
-  validates_numericality_of :third_party_insurance, greater_than: 0
+  validates_numericality_of :third_part_insurance, greater_than: 0
   
 end

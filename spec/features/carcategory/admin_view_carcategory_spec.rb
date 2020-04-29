@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Admin view Car Categories' do
   scenario 'successfully' do
-      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_party_insurance:800)
+      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
 
       visit root_path
       click_on 'Categorias'
@@ -11,8 +11,8 @@ feature 'Admin view Car Categories' do
   end
 
   scenario 'and view details' do        
-      cat_b= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_party_insurance:800)
-      cat_c= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+      cat_b= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
+      cat_c= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
       
       visit root_path
       click_on 'Categorias'
@@ -35,8 +35,8 @@ feature 'Admin view Car Categories' do
     end
 
     scenario 'and return to home page' do
-      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_party_insurance:800)
-      car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
+      car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
 
       visit root_path
       click_on 'Categorias'
@@ -46,8 +46,8 @@ feature 'Admin view Car Categories' do
     end
 
     scenario 'and return to manufacturers page' do
-      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_party_insurance:800)
-      car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+      car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
+      car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
 
       visit root_path
       click_on 'Categorias'
@@ -58,8 +58,8 @@ feature 'Admin view Car Categories' do
     end
 
     scenario 'and view filtered car models' do
-      cat_b= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_party_insurance:800)
-      cat_c= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_party_insurance:300)
+      cat_b= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
+      cat_c= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
       manufacturer= Manufacturer.create!(name: 'Fiat')
 
       uno = CarModel.create!(name:'Uno', year:2020, manufacturer: manufacturer, motorization: '1.0',fuel_type: 'Flex', carcategory: cat_b)
