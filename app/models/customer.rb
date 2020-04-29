@@ -1,4 +1,6 @@
 class Customer < ApplicationRecord
+  has_many :rental
+
   validates :name, uniqueness: { message: 'já está em uso'}
   validates :name, presence: { message: 'não pode ficar em branco'}
 

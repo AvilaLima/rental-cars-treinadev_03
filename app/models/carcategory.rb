@@ -1,6 +1,7 @@
 class Carcategory < ApplicationRecord
-  has_many :car_models
-    
+  has_many :car_models 
+  has_many :rentals
+  
   validates :name, uniqueness: { message: 'Nome deve ser único'}
   validates :name, presence: { message: 'Nome não pode ficar em branco'}
   

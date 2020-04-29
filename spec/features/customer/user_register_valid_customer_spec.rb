@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User register valid customer' do
     scenario 'and CPF must be unique' do
-        Customer.create!(name: 'Alexandre', document: '902.181.269-05', email:'lima@fatecsp.br')
+        Customer.create!(name: 'Alexandre', document: '902.181.269-05', email:'lima@gmail.com')
         visit root_path
         click_on 'Clientes'
         click_on 'Registrar novo cliente'
@@ -35,7 +35,7 @@ feature 'User register valid customer' do
     
         fill_in 'Nome', with: 'Alexandre'  
         fill_in 'CPF', with: ''
-        fill_in 'Email', with: 'lima@fatecsp.br'
+        fill_in 'Email', with: 'lima@gmail.com'
         click_on 'Enviar'
     
         expect(page).to have_content('não pode ficar em branco')
