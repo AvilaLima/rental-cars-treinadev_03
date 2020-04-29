@@ -1,5 +1,12 @@
 save_page #debug do capibara(parte de teste do rails)
 belongs_to #não permite null mas, tem como marcar optional na model
 
+#Resolvendo ambiguidade nos testes
 find("a#details-#{uno.id}").click() ou #click_on "details-#{uno.id}"
-         #Resolvendo ambiguidade nos testes
+         
+
+
+criar model e logo em seguida traduzir com o i18n
+para não precisar usar nas labels texto puro e sim a tradução do i18n: 
+<%= CarModel.human_attribute_name(:manufacturer) %> ao invés de 
+<dt>Fabricante: </dt> 
