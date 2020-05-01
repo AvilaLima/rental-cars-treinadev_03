@@ -16,7 +16,7 @@ feature 'User register valid customer' do
         fill_in 'Email', with: 'pedro@fatecsp.br'
         click_on 'Enviar'
 
-        expect(page).to have_content('Document já está em uso')
+        expect(page).to have_content('Documento já está em uso')
     end
 
     scenario 'and name can not be blank' do

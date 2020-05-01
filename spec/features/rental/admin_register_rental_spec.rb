@@ -27,4 +27,15 @@ feature 'Admin register rental' do
     expect(page).to have_content("Cliente: #{customer.name}")
     expect(page).to have_content("Categoria: #{car_category.name}")
   end
+
+  scenario 'cannot view unless logged in' do
+    visit root_path
+
+    expect(page).not_to have_link('Locações')
+  end
+  scenario 'cannot view unless logged in' do
+    visit new_rental_path
+
+    expect(current_path).to eq(new_user_session_path)
+  end
 end

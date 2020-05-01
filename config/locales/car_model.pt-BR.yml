@@ -3,6 +3,12 @@ pt-BR:
   activerecord:
     models:
       car_model: Modelo de Carro
+      carcategory: Categoria de Carro
+      customer: Cliente
+      manufacturer: Fabricante
+      rental: Locação
+      subsidiary: Filial
+      user: Usuário
     attributes:
       car_model:
         name: Nome
@@ -13,3 +19,25 @@ pt-BR:
         carcategory: Categoria
         manufacturer_id: Fabricante
         carcategory_id: Categoria
+      carcategory:
+        name: Nome
+        daily_rate: Diária
+        car_insurance: Seguro do carro
+        third_part_insurance: Seguro contra terceiros
+      customer:
+        name: Nome
+        document: Documento
+        email: Email
+      manufacturer:
+        name: Nome
+      rental:
+        start_date: Data de início
+        end_date: Data de término
+      subsidiary:
+        name: Nome
+        cnpj: CNPJ
+        address: Endereço
+      user:
+        email: Email
+        encrypted_password: Senha
+      

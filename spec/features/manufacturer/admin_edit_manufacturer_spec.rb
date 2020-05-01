@@ -49,4 +49,5 @@ feature 'Admin edits manufacturer' do
 
     expect(page).to have_content('Nome deve ser único')
   end
+  
 end

@@ -101,9 +101,9 @@ feature 'Admin edits carcategory'do
     fill_in 'Seguro contra terceiros', with: '-200'
     click_on 'Enviar'
     
-    expect(page).to have_content('Daily rate deve ser maior que 0')
-    expect(page).to have_content('Car insurance deve ser maior que 0')
-    expect(page).to have_content('Third part insurance deve ser maior que 0')
+    expect(page).to have_content('Diária deve ser maior que 0')
+    expect(page).to have_content('Seguro do carro deve ser maior que 0')
+    expect(page).to have_content('Seguro contra terceiros deve ser maior que 0')
     
     
   end

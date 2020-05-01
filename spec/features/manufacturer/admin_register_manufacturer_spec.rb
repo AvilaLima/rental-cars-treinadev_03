@@ -26,4 +26,15 @@ feature 'Admin register manufacturer' do
     expect(page).to have_content('Fiat')
     expect(page).to have_link('Voltar')
   end
+
+  scenario 'cannot view unless logged in' do
+    visit root_path
+
+    expect(page).not_to have_link('Fabricantes')
+  end
+  scenario 'cannot view unless logged in' do
+    visit new_manufacturer_path
+
+    expect(current_path).to eq(new_user_session_path)
+  end
 end

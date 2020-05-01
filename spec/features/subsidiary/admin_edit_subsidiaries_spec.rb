@@ -74,7 +74,7 @@ feature 'Admin edit subsidiaries' do
       fill_in 'Nome', with: 'Caoa'
       click_on 'Enviar'
       
-      expect(page).to have_content('Name já está em uso')
+      expect(page).to have_content('Nome já está em uso')
     end
   end
   

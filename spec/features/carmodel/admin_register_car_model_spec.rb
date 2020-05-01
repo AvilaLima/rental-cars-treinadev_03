@@ -49,5 +49,15 @@ feature 'Admin register car models' do
     expect(page).to have_content('Categoria é obrigatório(a)')
 
   end
+  scenario 'cannot view unless logged in' do
+    visit root_path
+
+    expect(page).not_to have_link('Modelos de Carro')
+  end
+  scenario 'cannot view unless logged in' do
+    visit new_car_model_path
+
+    expect(current_path).to eq(new_user_session_path)
+  end
 
 end
