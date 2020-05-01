@@ -107,4 +107,11 @@ feature 'Admin edits carcategory'do
     
     
   end
+
+  scenario 'cannot view unless logged in' do
+    carcategory=Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
+    visit edit_carcategory_path(carcategory)
+
+    expect(page).not_to have_content(carcategory.name)
+  end
 end

@@ -28,13 +28,13 @@ feature 'Admin register manufacturer' do
   end
 
   scenario 'cannot view unless logged in' do
-    visit root_path
-
-    expect(page).not_to have_link('Fabricantes')
-  end
-  scenario 'cannot view unless logged in' do
     visit new_manufacturer_path
 
     expect(current_path).to eq(new_user_session_path)
+  end
+  scenario 'cannot view unless logged in' do
+    visit root_path
+
+    expect(page).not_to have_link('Fabricantes')
   end
 end

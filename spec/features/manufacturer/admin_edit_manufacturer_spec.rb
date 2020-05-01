@@ -49,5 +49,10 @@ feature 'Admin edits manufacturer' do
 
     expect(page).to have_content('Nome deve ser único')
   end
-  
+  scenario 'cannot view unless logged in' do
+    manufacturer=Manufacturer.create!(name: 'Fiat')
+    visit edit_manufacturer_path(manufacturer)
+
+    expect(page).not_to have_content(manufacturer.name)
+  end
 end

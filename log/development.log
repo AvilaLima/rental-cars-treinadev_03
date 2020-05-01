@@ -6766,3 +6766,131 @@ Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 1188
 
 
   [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/carcategories" for 127.0.0.1 at 2020-05-01 02:17:04 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarcategoriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carcategories"[0m
+  ↳ app/controllers/carcategories_controller.rb:4:in `index'
+  Rendering carcategories/index.html.erb within layouts/application
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/carcategories/index.html.erb:7
+  Rendered carcategories/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 30.4ms | ActiveRecord: 1.6ms | Allocations: 23394)
+
+
+Started GET "/carcategories/1" for 127.0.0.1 at 2020-05-01 02:17:07 -0300
+Processing by CarcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:18:in `show'
+  Rendering carcategories/show.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."carcategory_id" = ?[0m  [["carcategory_id", 1]]
+  ↳ app/views/carcategories/show.html.erb:7
+  Rendered carcategories/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 9924)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-05-01 02:17:10 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1272)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 6675)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-05-01 02:17:14 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yZQOfCpE2mk38Tq0P0KooWatLAqhk1FJBFhy284oHhwCx/dGtgH0vKiIkErvRFo3JqzAbkwQM4vKKqeG4+FS2g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 5016)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-01 02:17:14 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 02:17:14 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 648)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2492)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 7233)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-05-01 02:17:15 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 02:17:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4595)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-05-01 02:17:17 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 02:17:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 4579)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-05-01 02:17:19 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 02:17:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 169)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4596)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 02:22:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"carQi8NemvWSsEORir7Dcrp6bYfBH/3zzxVHGf8vXDrHQnNzc5g88T7/9SbspcqbUtdv5BMBnt8WZswZxqdQwQ==", "user"=>{"email"=>"lima@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lima@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/carcategories/1/edit
+Completed 302 Found in 154ms (ActiveRecord: 0.2ms | Allocations: 6260)
+
+
+Started GET "/carcategories/1/edit" for 127.0.0.1 at 2020-05-01 02:22:29 -0300
+Processing by CarcategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carcategories_controller.rb:22:in `edit'
+  Rendering carcategories/edit.html.erb within layouts/application
+  Rendered carcategories/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 603)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5879)
+
+

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Admin register manufacturer' do
+feature 'Admin register carcategory' do
   scenario 'from index page' do
     #Logando
     user = User.create!(email: 'test@teste.com.br', password: '12345678')    
@@ -33,11 +33,7 @@ feature 'Admin register manufacturer' do
     expect(page).to have_link('Voltar')
   end
 
-  scenario 'cannot view unless logged in' do
-    visit root_path
-
-    expect(page).not_to have_link('Locações')
-  end
+  
   scenario 'cannot view unless logged in' do
     visit new_carcategory_path
 

@@ -68,4 +68,10 @@ feature 'Visitor view manufacturers' do
 
     expect(current_path).to eq manufacturers_path
   end
+
+  scenario 'cannot view unless logged in' do
+    visit root_path
+
+    expect(page).not_to have_link('Fabricantes')
+  end
 end

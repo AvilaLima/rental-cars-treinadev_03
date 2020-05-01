@@ -77,5 +77,10 @@ feature 'Admin edit subsidiaries' do
       expect(page).to have_content('Nome já está em uso')
     end
   end
-  
+  scenario 'cannot view unless logged in' do
+    subsidiary = Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
+    visit edit_subsidiary_path(subsidiary)
+
+    expect(page).not_to have_content(subsidiary.name)
+  end
 end

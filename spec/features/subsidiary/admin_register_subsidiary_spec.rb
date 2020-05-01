@@ -33,4 +33,9 @@ feature 'Admin register subsidiary' do
     click_on 'Voltar'
     expect(current_path).to eq subsidiaries_path
   end
+  scenario 'cannot view unless logged in' do
+    visit new_subsidiary_path
+
+    expect(current_path).to eq(new_user_session_path)
+  end
 end

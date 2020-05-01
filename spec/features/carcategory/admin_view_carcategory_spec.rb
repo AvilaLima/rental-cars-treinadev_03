@@ -93,5 +93,14 @@ feature 'Admin view Car Categories' do
       
       expect(page).to have_link('Voltar', href: carcategories_path)
     end
-
+    scenario 'cannot view unless logged in' do
+      visit carcategories_path
+  
+      expect(current_path).to eq(new_user_session_path)
+    end
+    scenario 'cannot view unless logged in' do
+      visit root_path
+  
+      expect(page).not_to have_link('Categorias')
+    end
 end

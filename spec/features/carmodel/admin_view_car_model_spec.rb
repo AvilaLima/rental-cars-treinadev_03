@@ -73,4 +73,9 @@ feature 'Admin view car models' do
         expect(page).not_to have_content 'Toro'
         expect(page).not_to have_content 'Motor: 2.0'
     end
+    scenario 'cannot view unless logged in' do
+        visit root_path
+
+        expect(page).not_to have_link('Modelos de Carros')
+    end
 end
