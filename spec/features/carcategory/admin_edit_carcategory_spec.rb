@@ -4,7 +4,10 @@ feature 'Admin edits carcategory'do
   
   scenario 'sucessfully' do
     Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
-
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
+    
     visit root_path
     click_on 'Categorias'
     click_on 'Categoria A'
@@ -23,6 +26,9 @@ feature 'Admin edits carcategory'do
 
   scenario 'and return to subsidiaries page' do
     Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
     click_on 'Categorias'
@@ -34,6 +40,10 @@ feature 'Admin edits carcategory'do
 
   scenario 'and name cannot be blank' do    
     Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
+
     visit root_path
     
     click_on 'Categorias'
@@ -50,6 +60,9 @@ feature 'Admin edits carcategory'do
   scenario 'and name must be unique' do
     Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
     Carcategory.create!(name: 'Categoria S',daily_rate:200,car_insurance: 250,third_part_insurance:400)
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
     click_on 'Categorias'
@@ -69,6 +82,9 @@ feature 'Admin edits carcategory'do
 
   scenario 'and daily_rate and car_insurance and third_part_insurance cannot be less than zero' do
     Carcategory.create!(name: 'Categoria A',daily_rate:50,car_insurance: 100,third_part_insurance:150)
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
 

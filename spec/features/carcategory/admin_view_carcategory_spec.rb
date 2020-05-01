@@ -3,6 +3,9 @@ require 'rails_helper'
 feature 'Admin view Car Categories' do
   scenario 'successfully' do
       car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
 
       visit root_path
       click_on 'Categorias'
@@ -13,6 +16,9 @@ feature 'Admin view Car Categories' do
   scenario 'and view details' do        
       cat_b= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
       cat_c= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
       
       visit root_path
       click_on 'Categorias'
@@ -28,6 +34,9 @@ feature 'Admin view Car Categories' do
     end
 
     scenario 'and no categories are created' do
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
       visit root_path
       click_on 'Categorias'
 
@@ -37,6 +46,9 @@ feature 'Admin view Car Categories' do
     scenario 'and return to home page' do
       car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
       car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
 
       visit root_path
       click_on 'Categorias'
@@ -48,6 +60,9 @@ feature 'Admin view Car Categories' do
     scenario 'and return to manufacturers page' do
       car_category= Carcategory.create!(name: 'Caminhonete',daily_rate:1000,car_insurance: 500,third_part_insurance:800)
       car_category= Carcategory.create!(name: 'Coupe',daily_rate:500,car_insurance: 150,third_part_insurance:300)
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
 
       visit root_path
       click_on 'Categorias'
@@ -64,6 +79,9 @@ feature 'Admin view Car Categories' do
 
       uno = CarModel.create!(name:'Uno', year:2020, manufacturer: manufacturer, motorization: '1.0',fuel_type: 'Flex', carcategory: cat_b)
       mobi = CarModel.create!(name:'Mobi', year:2020, manufacturer: manufacturer, motorization: '1.0',fuel_type: 'Flex', carcategory: cat_c)
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
       
       visit root_path
       click_on 'Categorias'

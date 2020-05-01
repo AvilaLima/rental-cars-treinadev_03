@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'User register customer' do
     scenario 'from index page' do
+        #Logando
+        user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+        login_as user, scope: :user
         visit root_path
         click_on 'Clientes'
 
@@ -9,6 +12,9 @@ feature 'User register customer' do
     end
 
     scenario 'successfully' do
+        #Logando
+        user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+        login_as user, scope: :user
         visit root_path
         click_on 'Clientes'
         click_on 'Registrar novo cliente'

@@ -9,7 +9,9 @@ feature 'Admin register rental' do
                                       daily_rate:50,
                                       car_insurance: 100,
                                       third_part_insurance:150)
-
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')
+    
+    login_as user, scope: :user
     visit root_path
     click_on 'Locações'
     click_on 'Registrar nova locação'

@@ -11,6 +11,9 @@ feature 'Admin view car models' do
         CarModel.create!(name: 'Uno', year: 2020, manufacturer: fiat, motorization: '1.0', fuel_type: 'Flex', carcategory: cat_a)            
         CarModel.create!(name: 'Ka', year: 2021, manufacturer: ford, motorization: '1.4', fuel_type: 'Flex', carcategory: cat_a)            
 
+        #Logando
+        user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+        login_as user, scope: :user
         #act
         visit root_path
         click_on 'Modelos de Carros'
@@ -26,7 +29,9 @@ feature 'Admin view car models' do
         expect(page).to have_content '2021'
     end
     scenario 'no car models' do
-       
+        #Logando
+        user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+        login_as user, scope: :user
         visit root_path
         click_on 'Modelos de Carros'
     
@@ -42,7 +47,9 @@ feature 'Admin view car models' do
         
         cat_e= Carcategory.create!(name: 'Caminhonete',daily_rate:200,car_insurance: 350,third_part_insurance:500)
         CarModel.create!(name: 'Toro', year: 2020, manufacturer: fiat, motorization: '2.0', fuel_type: 'Diesel', carcategory: cat_e)     
-
+        #Logando
+        user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+        login_as user, scope: :user
         #act
         visit root_path
         click_on 'Modelos de Carros'

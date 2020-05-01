@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'Admin register manufacturer' do
   scenario 'from index page' do
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Fabricantes'
 
@@ -9,6 +12,9 @@ feature 'Admin register manufacturer' do
   end
 
   scenario 'successfully' do
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Fabricantes'
     click_on 'Registrar novo fabricante'

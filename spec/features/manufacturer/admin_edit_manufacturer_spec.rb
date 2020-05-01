@@ -3,6 +3,9 @@ require 'rails_helper'
 feature 'Admin edits manufacturer' do
   scenario 'successfully' do
     Manufacturer.create!(name: 'Fiat')
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
     click_on 'Fabricantes'
@@ -16,6 +19,9 @@ feature 'Admin edits manufacturer' do
 
   scenario 'and name cannot be blank' do
     Manufacturer.create!(name: 'Fiat')
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
     click_on 'Fabricantes'
@@ -30,6 +36,9 @@ feature 'Admin edits manufacturer' do
   scenario 'and name must be unique' do
     Manufacturer.create!(name: 'Fiat')
     Manufacturer.create!(name: 'Honda')
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
 
     visit root_path
     click_on 'Fabricantes'

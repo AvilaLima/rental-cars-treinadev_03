@@ -3,6 +3,9 @@ feature 'Admin edit subsidiaries' do
   scenario 'successfully' do
     subsidiary= Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
 
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
     click_on 'Caoa'
@@ -23,6 +26,9 @@ feature 'Admin edit subsidiaries' do
   scenario 'and return to subsidiaries page' do
     Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
 
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
     click_on 'Caoa'
@@ -34,6 +40,10 @@ feature 'Admin edit subsidiaries' do
   context '#name' do
     scenario 'cannot be blank' do
       subsidiary= Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
+
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
       visit root_path
       
       click_on 'Filiais'
@@ -53,6 +63,9 @@ feature 'Admin edit subsidiaries' do
       subsidiary = Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
       subsidiary_a = Subsidiary.create!(name: 'SIM',cnpj:'94.201.741/0001-84',address: 'Rua Esquerda, 333')
 
+      #Logando
+      user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+      login_as user, scope: :user
       visit root_path
       
       click_on 'Filiais'

@@ -5,6 +5,9 @@ feature 'Admin view subsidiaries' do
     subsidiary= Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita,222')
     subsidiary= Subsidiary.create!(name: 'SIM',cnpj:'53.783.368/0001-30',address: 'Rua Esquerda,333')
 
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
                   
@@ -15,6 +18,9 @@ feature 'Admin view subsidiaries' do
     subsidiary= Subsidiary.create!(name: 'Caoa',cnpj:'36.418.249/0001-69',address: 'Rua Direita, 222')
     subsidiary= Subsidiary.create!(name: 'SIM',cnpj:'53.783.368/0001-30',address: 'Rua Esquerda, 333')
 
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
     click_on 'Caoa'
@@ -26,6 +32,9 @@ feature 'Admin view subsidiaries' do
   end
 
   scenario 'and no subsidiaries are created' do
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
 
@@ -33,6 +42,9 @@ feature 'Admin view subsidiaries' do
   end
 
   scenario 'and return to home page' do
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
     click_on 'Voltar'
@@ -44,6 +56,9 @@ feature 'Admin view subsidiaries' do
     subsidiary= Subsidiary.create!(name: 'Caoa',cnpj:'53.783.368/0001-30',address: 'Rua Direita,222')
     subsidiary= Subsidiary.create!(name: 'SIM',cnpj:'36.418.249/0001-69',address: 'Rua Esquerda,333')
 
+    #Logando
+    user = User.create!(email: 'test@teste.com.br', password: '12345678')    
+    login_as user, scope: :user
     visit root_path
     click_on 'Filiais'
     click_on 'Caoa'
