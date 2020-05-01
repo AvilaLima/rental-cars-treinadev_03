@@ -5362,3 +5362,305 @@ Processing by RentalsController#create as HTML
 Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 8841)
 
 
+Started GET "/rentals" for 127.0.0.1 at 2020-04-29 02:57:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:4:in `index'
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:4
+  Rendered rentals/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 792)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 5775)
+
+
+Started GET "/rentals/new" for 127.0.0.1 at 2020-04-29 02:58:37 -0300
+Processing by RentalsController#new as HTML
+Started GET "/rentals" for 127.0.0.1 at 2020-04-29 02:58:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:4:in `index'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1775)
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:4
+  Rendered rentals/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 832)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 13506)
+
+
+  
+ActionView::Template::Error (Object must be a Date, DateTime or Time object. :end_date given.):
+    3:   <%= f.label :start_date, 'Data de início' %>
+    4:   <%= f.date_field :start_date %>
+    5:   <%= f.label :end_date, 'Data de término' %>
+    6:   <%= f.date_field l :end_date %>
+    7:   <%= f.label :customer_id, 'Cliente' %>
+    8:   <%= f.collection_select :customer_id, @customers, :id, :name %>
+    9:   <%= f.label :carcategory_id, 'Categoria' %>
+  
+app/views/rentals/new.html.erb:6
+app/views/rentals/new.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 378ms (Views: 374.8ms | ActiveRecord: 0.5ms | Allocations: 330429)
+
+
+Started GET "/rentals/new" for 127.0.0.1 at 2020-04-29 02:58:41 -0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1095)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+  
+ActionView::Template::Error (Object must be a Date, DateTime or Time object. :end_date given.):
+    3:   <%= f.label :start_date, 'Data de início' %>
+    4:   <%= f.date_field :start_date %>
+    5:   <%= f.label :end_date, 'Data de término' %>
+    6:   <%= f.date_field l :end_date %>
+    7:   <%= f.label :customer_id, 'Cliente' %>
+    8:   <%= f.collection_select :customer_id, @customers, :id, :name %>
+    9:   <%= f.label :carcategory_id, 'Categoria' %>
+  
+app/views/rentals/new.html.erb:6
+app/views/rentals/new.html.erb:2
+Started GET "/rentals/new" for 127.0.0.1 at 2020-04-29 02:58:54 -0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1381)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2593)
+
+
+  
+ActionView::Template::Error (Object must be a Date, DateTime or Time object. "<input type=\"date\" name=\"rental[end_date]\" id=\"rental_end_date\" />" given.):
+    3:   <%= f.label :start_date, 'Data de início' %>
+    4:   <%= f.date_field :start_date %>
+    5:   <%= f.label :end_date, 'Data de término' %>
+    6:   <%= l f.date_field :end_date %>
+    7:   <%= f.label :customer_id, 'Cliente' %>
+    8:   <%= f.collection_select :customer_id, @customers, :id, :name %>
+    9:   <%= f.label :carcategory_id, 'Categoria' %>
+  
+app/views/rentals/new.html.erb:6
+app/views/rentals/new.html.erb:2
+Started GET "/rentals/new" for 127.0.0.1 at 2020-04-29 02:59:02 -0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/rentals/new.html.erb:8
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/rentals/new.html.erb:10
+  Rendered rentals/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 7927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.4ms | Allocations: 12077)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200501022444)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501022444"]]
+  [1m[35m (44.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-05-01 00:14:49 -0300
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x000055e4dc8e5ca8>):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2020-05-01 00:15:47 -0300
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007ff53005a690>):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2020-05-01 00:16:13 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 9750)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 599)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 5099)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.6ms | Allocations: 14303)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:16 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"y1hI6hBrL/dCQs9OQPQmduz2SBqQ8XrcluyZV8CLMnT4i17e1AwQNrB1ftXTvH1xXVhUHeJVA2Hj+6ICtY2iZA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 443)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"y1hI6hBrL/dCQs9OQPQmduz2SBqQ8XrcluyZV8CLMnT4i17e1AwQNrB1ftXTvH1xXVhUHeJVA2Hj+6ICtY2iZA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 4468)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:17 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"o3qQuaMcOtdZsCuTbgyl91B0TmL6LxSDUuEb3Yd9/oIVyWjegv95tT4+Pqcc+tV7/YXF3Ve5e4aNQUxNeJNU6Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"o3qQuaMcOtdZsCuTbgyl91B0TmL6LxSDUuEb3Yd9/oIVyWjegv95tT4+Pqcc+tV7/YXF3Ve5e4aNQUxNeJNU6Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4433)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:38 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"dkG/xUyw7YHM58UmY3VCg7Xv1EtpdYDQXUiTJ3z5TrbA8keibVOu46tp0BIRgzIPGB5f9MTj79WC6MS3gxfk3Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 419)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"dkG/xUyw7YHM58UmY3VCg7Xv1EtpdYDQXUiTJ3z5TrbA8keibVOu46tp0BIRgzIPGB5f9MTj79WC6MS3gxfk3Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 4422)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"gedAie8iBnofLury8++GHPqwvZN/osHRrXg/cwWGXX43VLjuzsFFGHig/8aBGfaQV0E2LNI0rtRy2Gjj+mj3FQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 413)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"gedAie8iBnofLury8++GHPqwvZN/osHRrXg/cwWGXX43VLjuzsFFGHig/8aBGfaQV0E2LNI0rtRy2Gjj+mj3FQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4421)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:16:40 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"DQjudRK5ubhGfCii7O1TXj1/KW4rvJ02htOQyKLTAyq7uxYSM1r62iHyPZaeGyPSkI6i0YYq8jNZc8dYXT2pQQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 407)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"DQjudRK5ubhGfCii7O1TXj1/KW4rvJ02htOQyKLTAyq7uxYSM1r62iHyPZaeGyPSkI6i0YYq8jNZc8dYXT2pQQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 4422)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:17:22 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q7hn7qxbUDH8R1F92t9v5bHGk4TmPH0hjiBXHzqMOCP1C5+JjbgTU5vJREmoKR9pHDcYO0uqEiRRgACPxWKSSA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 423)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Q7hn7qxbUDH8R1F92t9v5bHGk4TmPH0hjiBXHzqMOCP1C5+JjbgTU5vJREmoKR9pHDcYO0uqEiRRgACPxWKSSA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4433)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:19:34 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jLTf8qP/R1cYCOFCyjsNGz9HRMJwnQ/vTUmo2YiuQ786ByeVghwENX+G9Ha4zX2XkrbPfd0LYOqS6f9Jd0Dp1A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"jLTf8qP/R1cYCOFCyjsNGz9HRMJwnQ/vTUmo2YiuQ786ByeVghwENX+G9Ha4zX2XkrbPfd0LYOqS6f9Jd0Dp1A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1825)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 6827)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:21:34 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 0.8ms | Allocations: 11328)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:23:10 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 529)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 4164)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 25.2ms | ActiveRecord: 1.2ms | Allocations: 13487)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:23:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 514)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1808)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6932)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:23:30 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"luF31nRomv1i4lcg/jhPYSCLAnao01sVSiDzFnFRM2AgUo+xVYvZnwVsQhSMzj/tjXqJyQVFNBCVgKSGjr+ZCw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 432)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"luF31nRomv1i4lcg/jhPYSCLAnao01sVSiDzFnFRM2AgUo+xVYvZnwVsQhSMzj/tjXqJyQVFNBCVgKSGjr+ZCw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4425)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-01 00:23:31 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+HG4CWDk2k/WX7zmRXLW5dT7aVHN9/D+XmTrfIQPSxNOwkBuQQeZLbHRqdI3hKZpeQri7mBhn/uBxLzse+HheA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 407)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"+HG4CWDk2k/WX7zmRXLW5dT7aVHN9/D+XmTrfIQPSxNOwkBuQQeZLbHRqdI3hKZpeQri7mBhn/uBxLzse+HheA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4415)
+
+
