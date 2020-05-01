@@ -15,11 +15,12 @@
     <tbody>
     <% @cars.each do |c| %>
       <tr id="car-<%= c.id %>">
-          <td><%= link_to  s.license_plate, s %></td>
+          <td><%= link_to  c.license_plate, c %></td>
           <td><%= c.car_model.name %></td>
-          <td><%= c.subsdiary.name %></td>
+          <td><%= c.subsidiary.name %></td>
           <td><%= link_to 'Ver Detalhes', c, id: "details-#{c.id}" %></td>
       </tr>
     <% end %>
     </tbody>
 </table>
+<%=  link_to 'Voltar', root_path %>

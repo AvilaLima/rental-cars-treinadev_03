@@ -13,17 +13,17 @@ class CarsController < ApplicationController
 
   def new
     @car = Car.new
-    @subsdiaries = Subsidiary.all
+    @subsidiaries = Subsidiary.all
     @car_models = CarModel.all
   end
 
   def create
     @car = Car.create(car_params)
-    if @car.save!
+    if @car.save
       flash[:notice] = 'Carro criado com sucesso'
       redirect_to cars_path
     else
-      @subsdiaries = Subsidiary.all
+      @subsidiaries = Subsidiary.all
       @car_models = CarModel.all
       render :new
     end

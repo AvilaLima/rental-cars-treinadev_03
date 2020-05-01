@@ -29,13 +29,11 @@ feature 'Admin register car' do
     fill_in 'Cor', with: 'Bege'
     fill_in 'Quilometragem', with: '200000'
     select subsidiary.name, from: 'Filial'
-    select cm.name, from: 'Modelo de Carro'
+    select cm.name, from: 'Modelo de carro'
     click_on 'Enviar'
 
-    expect(current_path).to eq car_path(CarModel.last.id)
+    expect(current_path).to eq cars_path
     expect(page).to have_content('BMF-2790')
-    expect(page).to have_content('Bege')
-    expect(page).to have_content('200000')
     expect(page).to have_content('Caoa')
     expect(page).to have_content('Toro')
     expect(page).to have_link('Voltar')
@@ -54,8 +52,8 @@ feature 'Admin register car' do
     expect(page).to have_content('Cor não pode ficar em branco')
     expect(page).to have_content('Quilometragem não pode ficar em branco')
     expect(page).to have_content('Filial é obrigatório(a)')
-    expect(page).to have_content('Modelo do carro é obrigatório(a)')
-    expect(current_path).to eq(new_car_path)
+    expect(page).to have_content('Modelo de carro é obrigatório(a)')
+    expect(current_path).to eq(cars_path)
 
   end
 
@@ -75,11 +73,11 @@ feature 'Admin register car' do
     fill_in 'Cor', with: 'Bege'
     fill_in 'Quilometragem', with: '200000'
     select subsidiary.name, from: 'Filial'
-    select cm.name, from: 'Modelo de Carro'
+    select cm.name, from: 'Modelo de carro'
     click_on 'Enviar'
 
     expect(page).to have_content('Placa já está em uso')
-    expect(current_path).to eq(new_car_path)
+    expect(current_path).to eq(cars_path)
   end
 
   scenario 'mileage greater than 0' do
@@ -100,12 +98,12 @@ feature 'Admin register car' do
     fill_in 'Cor', with: 'Bege'
     fill_in 'Quilometragem', with: '0'
     select subsidiary.name, from: 'Filial'
-    select cm.name, from: 'Modelo de Carro'
+    select cm.name, from: 'Modelo de carro'
     click_on 'Enviar'
 
     
     expect(page).to have_content('deve ser maior que 0')
-    expect(current_path).to eq(new_car_path)
+    expect(current_path).to eq(cars_path)
 
   end
   scenario 'cannot view unless logged in' do

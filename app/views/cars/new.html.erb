@@ -1,14 +1,21 @@
 <h1>Novo Carro</h1>
-<%= form_with mode:@car, local: true do |c| %>
+<% if @car.errors.any? %>
+  <ul>
+    <% @car.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with model:@car, local: true do |c| %>
   <%= c.label :license_plate %>
   <%= c.text_field :license_plate %>
   <%= c.label :color %>
   <%= c.text_field :color %>
-  <%= c.label :car_model_id, 'Modelo do carro' %>
+  <%= c.label :car_model_id %>
   <%= c.collection_select :car_model_id, @car_models, :id, :name %>
   <%= c.label :mileage %>
   <%= c.number_field :mileage %>
-  <%= c.label :subsdiary_id %>
-  <%= c.collection_select :subsidiary_id, @subsdiaries, :id, :name %>
+  <%= c.label :subsidiary_id %>
+  <%= c.collection_select :subsidiary_id, @subsidiaries, :id, :name %>
   <%= c.submit 'Enviar' %>
 <% end %>
