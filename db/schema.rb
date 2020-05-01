@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_022444) do
+ActiveRecord::Schema.define(version: 2020_05_01_213928) do
 
   create_table "car_models", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 2020_05_01_022444) do
     t.decimal "third_part_insurance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "license_plate"
+    t.string "color"
+    t.integer "car_model_id", null: false
+    t.integer "mileage"
+    t.integer "subsidiary_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["car_model_id"], name: "index_cars_on_car_model_id"
+    t.index ["subsidiary_id"], name: "index_cars_on_subsidiary_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -81,6 +93,8 @@ ActiveRecord::Schema.define(version: 2020_05_01_022444) do
 
   add_foreign_key "car_models", "carcategories"
   add_foreign_key "car_models", "manufacturers"
+  add_foreign_key "cars", "car_models"
+  add_foreign_key "cars", "subsidiaries"
   add_foreign_key "rentals", "carcategories"
   add_foreign_key "rentals", "customers"
 end

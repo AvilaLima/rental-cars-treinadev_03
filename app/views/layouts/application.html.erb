@@ -13,6 +13,7 @@
   <nav>
   <% if user_signed_in? %>
     <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+    <%= link_to 'Carros', cars_path %>
     <%= link_to 'Clientes', customers_path %>
     <%= link_to 'Fabricantes', manufacturers_path %>
     <%= link_to 'Filiais', subsidiaries_path %>

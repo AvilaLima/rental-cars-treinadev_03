@@ -1,0 +1,14 @@
+<h1>Novo Carro</h1>
+<%= form_with mode:@car, local: true do |c| %>
+  <%= c.label :license_plate %>
+  <%= c.text_field :license_plate %>
+  <%= c.label :color %>
+  <%= c.text_field :color %>
+  <%= c.label :car_model_id, 'Modelo do carro' %>
+  <%= c.collection_select :car_model_id, @car_models, :id, :name %>
+  <%= c.label :mileage %>
+  <%= c.number_field :mileage %>
+  <%= c.label :subsdiary_id %>
+  <%= c.collection_select :subsidiary_id, @subsdiaries, :id, :name %>
+  <%= c.submit 'Enviar' %>
+<% end %>

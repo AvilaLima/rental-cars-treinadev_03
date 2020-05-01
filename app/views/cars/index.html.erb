@@ -1,0 +1,25 @@
+<h1>Carros </h1>
+<div class="notice">
+  <%= notice %>
+</div>
+<%= link_to 'Registrar novo carro', new_car_path %>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Modelo do Carro</th>
+        <th>Filial</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @cars.each do |c| %>
+      <tr id="car-<%= c.id %>">
+          <td><%= link_to  s.license_plate, s %></td>
+          <td><%= c.car_model.name %></td>
+          <td><%= c.subsdiary.name %></td>
+          <td><%= link_to 'Ver Detalhes', c, id: "details-#{c.id}" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+</table>

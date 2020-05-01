@@ -6894,3 +6894,316 @@ Processing by CarcategoriesController#edit as HTML
 Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5879)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20200501213928)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cars" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "license_plate" varchar, "color" varchar, "car_model_id" integer NOT NULL, "mileage" integer, "subsidiary_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ec1f4fe478"
+FOREIGN KEY ("car_model_id")
+  REFERENCES "car_models" ("id")
+, CONSTRAINT "fk_rails_648d7eb1ee"
+FOREIGN KEY ("subsidiary_id")
+  REFERENCES "subsidiaries" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_cars_on_car_model_id" ON "cars" ("car_model_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_cars_on_subsidiary_id" ON "cars" ("subsidiary_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501213928"]]
+  [1m[35m (22.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-05-01 19:00:45 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 26.1ms | ActiveRecord: 0.7ms | Allocations: 17004)
+
+
+Started GET "/cars" for 127.0.0.1 at 2020-05-01 19:00:47 -0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  ↳ app/controllers/cars_controller.rb:4:in `index'
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 0.7ms | Allocations: 8202)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:00:48 -0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 18.2ms | Allocations: 13318)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 22.0ms | ActiveRecord: 1.6ms | Allocations: 23041)
+
+
+Started GET "/car_models" for 127.0.0.1 at 2020-05-01 19:07:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarModelsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "car_models"[0m
+  ↳ app/controllers/car_models_controller.rb:4:in `index'
+  Rendering car_models/index.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/car_models/index.html.erb:16
+  Rendered car_models/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 6835)
+
+
+Started GET "/car_models/new" for 127.0.0.1 at 2020-05-01 19:07:59 -0300
+Processing by CarModelsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering car_models/new.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers"[0m
+  ↳ app/views/car_models/new.html.erb:19
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/car_models/new.html.erb:21
+  Rendered car_models/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 8399)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 19.5ms | ActiveRecord: 2.6ms | Allocations: 19350)
+
+
+Started POST "/car_models" for 127.0.0.1 at 2020-05-01 19:08:13 -0300
+Processing by CarModelsController#create as JS
+  Parameters: {"authenticity_token"=>"Sfp5jYJX3T5GScEJGGQfwUTYAMCe2Kk41+6ve11xKuZraM5hIkjl/Ps3ABJhxwvXeANawhV6FwL+6etbkl2jFg==", "car_model"=>{"name"=>"Toro", "year"=>"2020", "motorization"=>"2.0", "fuel_type"=>"Flex", "manufacturer_id"=>"1", "carcategory_id"=>"2"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/car_models_controller.rb:21:in `create'
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/car_models_controller.rb:21:in `create'
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/car_models_controller.rb:21:in `create'
+  [1m[36mCarModel Create (0.3ms)[0m  [1m[32mINSERT INTO "car_models" ("name", "year", "manufacturer_id", "created_at", "updated_at", "motorization", "fuel_type", "carcategory_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Toro"], ["year", 2020], ["manufacturer_id", 1], ["created_at", "2020-05-01 22:08:13.881081"], ["updated_at", "2020-05-01 22:08:13.881081"], ["motorization", "2.0"], ["fuel_type", "Flex"], ["carcategory_id", 2]]
+  ↳ app/controllers/car_models_controller.rb:21:in `create'
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/car_models_controller.rb:21:in `create'
+Redirected to http://localhost:3000/car_models/1
+Completed 200 OK in 37ms (ActiveRecord: 11.5ms | Allocations: 10078)
+
+
+Started GET "/car_models/1" for 127.0.0.1 at 2020-05-01 19:08:13 -0300
+Processing by CarModelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models" WHERE "car_models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/car_models_controller.rb:10:in `show'
+  Rendering car_models/show.html.erb within layouts/application
+  [1m[36mManufacturer Load (0.3ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_models/show.html.erb:4
+  [1m[36mCarcategory Load (0.3ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories" WHERE "carcategories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/car_models/show.html.erb:12
+  Rendered car_models/show.html.erb within layouts/application (Duration: 30.2ms | Allocations: 2632)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 34.9ms | ActiveRecord: 0.9ms | Allocations: 8204)
+
+
+Started GET "/cars" for 127.0.0.1 at 2020-05-01 19:08:17 -0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  ↳ app/controllers/cars_controller.rb:4:in `index'
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 5942)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:08:18 -0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 5805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 10558)
+
+
+Started GET "/rentals" for 127.0.0.1 at 2020-05-01 19:14:12 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:4:in `index'
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:4
+  Rendered rentals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 12776)
+
+
+Started GET "/rentals/new" for 127.0.0.1 at 2020-05-01 19:14:13 -0300
+Processing by RentalsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rentals/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/rentals/new.html.erb:8
+  [1m[36mCarcategory Load (0.2ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/rentals/new.html.erb:10
+  Rendered rentals/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 10859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 1.3ms | Allocations: 21365)
+
+
+Started GET "/rentals/new" for 127.0.0.1 at 2020-05-01 19:14:16 -0300
+Processing by RentalsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rentals/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/rentals/new.html.erb:8
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/rentals/new.html.erb:10
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 6742)
+
+
+Started GET "/rentals/new" for 127.0.0.1 at 2020-05-01 19:14:19 -0300
+Processing by RentalsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rentals/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/rentals/new.html.erb:8
+  [1m[36mCarcategory Load (0.1ms)[0m  [1m[34mSELECT "carcategories".* FROM "carcategories"[0m
+  ↳ app/views/rentals/new.html.erb:10
+  Rendered rentals/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 8271)
+
+
+Started GET "/rentals" for 127.0.0.1 at 2020-05-01 19:14:20 -0300
+Processing by RentalsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals"[0m
+  ↳ app/controllers/rentals_controller.rb:4:in `index'
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:4
+  Rendered rentals/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6211)
+
+
+Started GET "/car_models" for 127.0.0.1 at 2020-05-01 19:16:37 -0300
+Processing by CarModelsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "car_models"[0m
+  ↳ app/controllers/car_models_controller.rb:4:in `index'
+  Rendering car_models/index.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/car_models/index.html.erb:16
+  [1m[36mManufacturer Load (0.2ms)[0m  [1m[34mSELECT "manufacturers".* FROM "manufacturers" WHERE "manufacturers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/car_models/index.html.erb:18
+  Rendered car_models/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 8197)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 0.6ms | Allocations: 15518)
+
+
+Started GET "/cars" for 127.0.0.1 at 2020-05-01 19:16:39 -0300
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  ↳ app/controllers/cars_controller.rb:4:in `index'
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:16
+  Rendered cars/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 7640)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:16:40 -0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.2ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 9340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 19.4ms | ActiveRecord: 0.5ms | Allocations: 18036)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:16:53 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.2ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 17735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 31.2ms | ActiveRecord: 2.6ms | Allocations: 40186)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:18:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.2ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 262.9ms | Allocations: 153579)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 3.5ms | Allocations: 166646)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00005596582bde98>:0x0000559657e3b9d8>):
+    10:   <%= c.number_field :mileage %>
+    11:   <%= c.label :subsdiary_id, 'Filial' %>
+    12:   <%= c.collection_select :subsidiary_id, @subsdiaries, :id, :name %>
+    13:   <%= f.submit 'Enviar' %>
+    14: <% end %>
+  
+app/views/cars/new.html.erb:13
+app/views/cars/new.html.erb:2
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:18:49 -0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 6797)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 12932)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-05-01 19:18:58 -0300
+Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCarModel Load (0.1ms)[0m  [1m[34mSELECT "car_models".* FROM "car_models"[0m
+  ↳ app/views/cars/new.html.erb:8
+  [1m[36mSubsidiary Load (0.1ms)[0m  [1m[34mSELECT "subsidiaries".* FROM "subsidiaries"[0m
+  ↳ app/views/cars/new.html.erb:12
+  Rendered cars/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 6133)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 12174)
+
+

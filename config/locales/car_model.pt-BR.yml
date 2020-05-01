@@ -9,6 +9,7 @@ pt-BR:
       rental: Locação
       subsidiary: Filial
       user: Usuário
+      car: Carro
     attributes:
       car_model:
         name: Nome
@@ -40,4 +41,9 @@ pt-BR:
       user:
         email: Email
         encrypted_password: Senha
-      
+      car:
+        license_plate: Placa
+        color: Cor
+        car_model_id: Modelo do carro
+        mileage: Quilometragem
+        subsidiary_id: Filial
