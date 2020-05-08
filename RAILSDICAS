@@ -10,3 +10,7 @@ criar model e logo em seguida traduzir com o i18n
 para não precisar usar nas labels texto puro e sim a tradução do i18n: 
 <%= CarModel.human_attribute_name(:manufacturer) %> ao invés de 
 <dt>Fabricante: </dt> 
+
+matchers no RSPEC
+byebug
+somente atribuição vc tem que usar self.

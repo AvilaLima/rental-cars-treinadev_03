@@ -25,6 +25,16 @@ class RentalsController < ApplicationController
     end
   end
 
+  def search
+    @code = params[:q].upcase
+    @rental = Rental.find_by(code: @code)
+    if @rental.blank? || @code.blank?
+      @rentals = Rental.all
+      flash.now[:alert] = "Nenhum resultado para: #{@code}"
+      render :index
+    end
+  end
+
   private 
   def rental_params
     params.require(:rental).permit(:start_date,:end_date,:customer_id,
