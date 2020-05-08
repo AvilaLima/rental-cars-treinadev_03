@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
   resources :car_models, only: [:index, :show, :new, :create]
-  resources :customers, only: [:index, :show, :new, :create]
+  resources :customers, only: [:index, :show, :new, :create]do
+    get 'search', on: :collection
+  end
   resources :cars, only: [:index, :show, :new, :create]
   devise_for :users
 end

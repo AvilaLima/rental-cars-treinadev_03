@@ -4,7 +4,7 @@ feature 'User search rental' do
   scenario 'successfully' do    
     customer= Customer.create!(name: 'Alexandre',
                               document: '902.181.269-05', 
-                              email:'lima@fatecsp.br')
+                              email:'lama@fatecsp.br')
     car_category= Carcategory.create!(name: 'Categoria A',
                                       daily_rate:50,
                                       car_insurance: 100,

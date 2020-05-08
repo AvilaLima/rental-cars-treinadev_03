@@ -25,6 +25,11 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
+  def search
+    @customers = Customer.where(name: params[:q])
+    render :index
+  end
+
   def customer_params
     params.require(:customer).permit(:name, :document, :email)
   end
