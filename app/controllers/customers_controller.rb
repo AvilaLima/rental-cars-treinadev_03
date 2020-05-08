@@ -24,9 +24,9 @@ class CustomersController < ApplicationController
   def show
     @customer = Customer.find(params[:id])
   end
-
+  
   def search
-    @customers = Customer.where(name: params[:q])
+    @customers = Customer.search(params[:q])
     render :index
   end
 

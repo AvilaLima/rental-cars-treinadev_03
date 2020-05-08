@@ -15,9 +15,15 @@ class Customer < ApplicationRecord
 
   private
 
+  scope :search, -> (query){where('name LIKE ?', "%#{query}%")
+                              .or(where(document: query)) }
+  #def search(query)
+  #  where('name LIKE ?', "%#{params[:q]}%")
+  #end
+
   def cpf_must_be_valid
     unless CPF.valid?(document)
-      errors.add(:document, 'não é válido')      
+      errors.add(:document, 'não é válido')
     end
   end
 end

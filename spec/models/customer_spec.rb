@@ -42,4 +42,63 @@ describe Customer do
       expect(customer.errors[:document]).to include('com formato inválido')
     end
   end
+
+  context '#search' do  
+    it 'by exact name' do    
+      customer= Customer.create!(name: 'Alexandre',
+        document: '902.181.269-05', 
+        email:'lima@fatecsp.br')  
+      another_customer= Customer.create!(name: 'Pablo',
+        document: '356.333.524-91', 
+        email:'pablo@fatecsp.br')
+
+      result = Customer.search(customer.name)
+      expect(result).to include(customer)
+      expect(result).not_to include(another_customer)
+  
+    end
+    it 'by partial name' do    
+      customer= Customer.create!(name: 'Alexandre Lima',
+        document: '902.181.269-05', 
+        email:'lima@fatecsp.br')  
+      another_customer= Customer.create!(name: 'Pablo',
+          document: '356.333.524-91', 
+          email:'pablo@fatecsp.br')
+  
+      result = Customer.search('Alexandre')
+  
+      expect(result).to include(customer)
+      expect(result).not_to include(another_customer)
+  
+    end
+
+    it 'finds nothing' do    
+      customer= Customer.create!(name: 'Alexandre Lima',
+        document: '902.181.269-05', 
+        email:'lima@fatecsp.br')  
+      another_customer= Customer.create!(name: 'Pablo',
+          document: '356.333.524-91', 
+          email:'pablo@fatecsp.br')
+  
+      result = Customer.search('test')
+  
+      expect(result).to be_blank
+  
+    end
+
+    it 'by cpf' do    
+      customer= Customer.create!(name: 'Alexandre Lima',
+        document: '902.181.269-05', 
+        email:'lima@fatecsp.br')  
+      another_customer= Customer.create!(name: 'Pablo',
+          document: '356.333.524-91', 
+          email:'pablo@fatecsp.br')
+  
+      result = Customer.search('902.181.269-05')
+  
+      expect(result).to include(customer)
+      expect(result).not_to include(another_customer)
+  
+    end
+  end
 end
